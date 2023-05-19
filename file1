@@ -1,0 +1,23 @@
+#include <iostream>
+
+bool isPalindrome(int arr[], int size) {
+    int left = 0;
+    int right = size - 1;
+
+    while (left < right) {
+        if (arr[left] != arr[right]) {
+            return false;
+        }
+        left++;
+        right--;
+    }
+
+    return true;
+}
+
+int main() {
+    int numbers[] = {1, 2, 3, 2, 1};
+    int size = sizeof(numbers) / sizeof(numbers[0]);
+    std::cout << isPalindrome(numbers, size) << std::endl;
+    return 0;
+}
